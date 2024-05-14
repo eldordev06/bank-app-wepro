@@ -4,9 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/main.css" />
+    <script
+      src="https://kit.fontawesome.com/86a707ec95.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Bank App</title>
   </head>
   <body>
+    <header class="header bg-gray-300 py-6">
+      <div class="container">
+        <div class="header__inner flex justify-between items-center">
+          <div id="nav-toggle" class="sm:hidden">
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </div>
+          <nav
+            id="header-nav"
+            class="header__nav sm:static sm:block hidden fixed top-0 bottom-0 right-0 left-0 animate-open-menu sm:w-fit bg-gray-300"
+          >
+            <ul
+              class="header__ul relative flex sm:gap-5 flex-col sm:flex-row items-center w-full h-full justify-around"
+            >
+              <div id="nav-close" class="absolute top-4 right-4 sm:hidden">
+                <i class="fa-xmark fa-2xl fa-solid"></i>
+              </div>
+              <li class="header__li">
+                <a href="#" class="header__link">Home</a>
+              </li>
+              <li class="header__li">
+                <a href="#wallets" class="header__link">My wallets</a>
+              </li>
+              <li class="header__li">
+                <a href="#transactions" class="header__link">My transactions</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__log-out">
+            <span>alexadams@google.com</span>
+            <i
+              class="fa-solid fa-right-from-bracket header__icon text-red-500 size-5"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </header>
     <script src="/main.js"></script>
+    <script src="/src/modules/header.js"></script>
   </body>
 </html>
